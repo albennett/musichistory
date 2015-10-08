@@ -1,5 +1,15 @@
 
+body {
+	margin: 50px 50px;
+}
 
+article {
+	background-color: #FEFAC0;
+	display: block;
+	border: solid black;
+	float: right;
+	width: 820px;
+}
 /*FORMS*/
 .music-form {
 	background-color: #4DD7FA ;
@@ -18,9 +28,27 @@ form {
 	margin: 0 auto;
     width : 200px;
     float: left;
+    border: solid black;
 }
 
 .move-text {
 	display: block;
 	padding: 10px;
 }
+
+nav {
+	display: block;
+	border: solid black;
+}
+
+.navigation {
+  display: block;
+  list-style-type: none;
+  margin: 3px 8px;
+  padding: 5px;
+  background-color: #FFB4B0;
+  font-family: Arial;
+  font-size: 18px;
+  cursor: pointer;
+}
+

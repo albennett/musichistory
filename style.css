@@ -11,10 +11,11 @@ article {
 	width: 785px;
 	top: 150px;
     left: 290px;
-    height: 450px;
+    height: 400px;
 }
 
-header {
+nav {
+	text-align: left;
 }
 
 form {
@@ -26,18 +27,18 @@ form {
     top: 150px;
     right: 865px;
     width: 200px;
-    height: 440px;
+    height: 390px;
 }
 
 /*ARTICLE*/
 
 .article-text {
-	padding: 2px 0 5px 15px;
+	padding: 2px 0 3px 15px;
 }
 
 .song-title {
  color: #785616;
- padding: 0 0 5px 15px ;
+ padding: 0 0 0 15px ;
 }
 /*FORMS*/
 .music-form {
@@ -66,7 +67,7 @@ form {
 
 .genre-text{
 	display: block;
-	margin: 9px;
+	margin: 10px 0 0 0;
 }
 
 #genre2>ul>li {
@@ -102,6 +103,11 @@ form {
 	margin: 2px;
 }
 
+nav ul {
+	text-align: left;
+	padding: 0;
+}
+
 .nav>nav {
 	background-color:#FFB4B0;
 	padding: 10px;
@@ -113,15 +119,18 @@ form {
 
 .button {
 	list-style: none;
-	border-radius: 60px;
+	border-radius: 50px;
 	border: black thin solid;
 	background-color: #C0C0C0;
-	width: 50px;
-
-}
-
-.button-text {
+	width: 60px;
 	text-align: center;
+	position:absolute;
+	right: 85px;
 }
 
 
+li.selected a {
+	text-decoration: none;
+	color: black;
+
+}

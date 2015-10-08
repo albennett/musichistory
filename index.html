@@ -12,7 +12,7 @@
     <nav>
       <ul>
         <li><a href="#">View music</a></li> 
-        <li><a href="#">Add music</a></li>
+        <li><a href="#">Add music </a></li>
         <li><a href="#">Profile</a></li>
       </ul>
     </nav>
@@ -20,7 +20,7 @@
   </header>
 
 		<form action="form.html" method="POST" class="music-form">
-	    <fieldset>
+	    <fieldset class="fieldset">
 	      <label for="song-length" class="move-text">Song Length</label>
 
 	      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
@@ -61,6 +61,10 @@
 			      <li><input type="checkbox" name="country" value="country"> Country</li>
 		      </ul>
 	      </div>
+
+	      <ul class="button">
+	      	<li class="button-text">Filter</li>
+	      </ul>
 
 			</fieldset>
 		</form>

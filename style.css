@@ -7,12 +7,26 @@ article {
 	background-color: #FEFAC0;
 	display: block;
 	border: solid black;
-	float: right;
-	width: 820px;
+	position: absolute;
+	width: 785px;
+	top: 150px;
+    left: 290px;
+    height: 450px;
 }
 
 header {
-	padding:
+}
+
+form {
+	margin: 0 auto;
+    width : 200px;
+    position: absolute;
+    border: solid medium black;
+    padding: 5px;
+    top: 150px;
+    right: 865px;
+    width: 200px;
+    height: 440px;
 }
 
 /*ARTICLE*/
@@ -39,12 +53,7 @@ header {
 	display: block;
 }
 
-form {
-	margin: 0 auto;
-    width : 200px;
-    float: left;
-    border: solid medium black;
-}
+
 
 .move-text {
 	display: block;
@@ -57,6 +66,7 @@ form {
 
 .genre-text{
 	display: block;
+	margin: 9px;
 }
 
 #genre2>ul>li {
@@ -79,12 +89,17 @@ form {
 	padding-left: 0px;
 }
 
+.fieldset {
+	border: none;
+}
+
 /* Nav */
 
 .nav>nav>ul>li {
 	clear:both;
 	display: inline;
 	padding: 2px;
+	margin: 2px;
 }
 
 .nav>nav {
@@ -95,4 +110,18 @@ form {
 	border: black medium solid;
 	margin: 10px;
 }
+
+.button {
+	list-style: none;
+	border-radius: 60px;
+	border: black thin solid;
+	background-color: #C0C0C0;
+	width: 50px;
+
+}
+
+.button-text {
+	text-align: center;
+}
+
 

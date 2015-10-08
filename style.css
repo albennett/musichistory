@@ -1,0 +1,26 @@
+
+
+/*FORMS*/
+.music-form {
+	background-color: #4DD7FA ;
+}
+
+#artists {
+	display: block;
+
+}
+
+#albums {
+	display: block;
+}
+
+form {
+	margin: 0 auto;
+    width : 200px;
+    float: left;
+}
+
+.move-text {
+	display: block;
+	padding: 10px;
+}

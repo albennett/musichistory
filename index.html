@@ -16,33 +16,35 @@
       </ul>
     </nav>
 
-		<form action="form.html" method="POST">
-
+		<form action="form.html" method="POST" class="music-form">
 	    <fieldset>
-	      <legend>Song Length</legend>
-	      <label for="song-length"></label>
-	      <input type="range" name="song-length" min="15" max="25" step="0.5" value="18.5">
-	    </fieldset>
+	      <label for="song-length" class="move-text">Song Length</label>
 
-			<fieldset>
-				<label for="feedback-type">Artists:</label>
-			    <select id="feedback-type" name="type">
+	      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
+	    
+				<label for="feedback-type" class="move-text">Artists:</label>
+			    <select id="artists" name="type">
 			    	<option>Option</option>
 			      <option>Ben Sollee</option>
 			      <option>Jose Gonzalez</option>
 			      <option>The Lone Bellow</option>
 			      <option>The National</option>
 			    </select>
-			</fieldset>
-
-			<fieldset>
-				<label for="feedback-type">Albums:</label>
-			    <select id="feedback-type" name="type">
+			
+				<label for="feedback-type" class="move-text">Albums:</label>
+			    <select id="albums" name="type">
 			    	<option>Option</option>
 			      <option>Learning to Bend</option>
 			      <option>Walter Mitty</option>
 			      <option>The Lone Bellow</option>
 			      <option>Trouble Will Find Me</option>
 			    </select>
+
+			    <label for = "checkbox" class="genre-text">Genre:</label>
+				    <input type="checkbox" name="rock" value="rock"> Rock
+			      <input type="checkbox" name="pop" value="pop"> Pop
+			      <input type="checkbox" name="indie" value="indie"> Indie
+			      <input type="checkbox" name="americana" value="americana"> Americana
+
 			</fieldset>
 		</form>

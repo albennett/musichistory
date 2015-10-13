@@ -1,0 +1,99 @@
+.all-forms {
+	float: left;
+	width: 200px;
+	height: 400px;
+	margin: 10px 17px 10px 30px;
+	background-color: #4DD7FA;
+	border: solid;
+	padding: 5px;
+}
+
+.article-songs {
+	float: left;
+	width: 890px;
+	height: 400px;
+	margin: 10px 17px 15px 0;
+	background-color: #FEFAC0;
+	border: solid;
+	
+}
+
+.song-title {
+ color: #785616;
+ padding: 0 0 0 15px ;
+}
+
+.article-text {
+	padding: 2px 0 3px 15px;
+}
+
+.button {
+	list-style: none;
+	border-radius: 50px;
+	border: black thin solid;
+	background-color: #C0C0C0;
+	width: 60px;
+	text-align: center;
+	position: relative;
+	right: -50px;
+}
+
+/*NAVIGATION*/
+.nav>nav>ul>li {
+
+	display: inline;
+	padding: 2px;
+}
+
+nav ul {
+	text-align: left;
+	padding: 0;
+}
+
+.nav>nav {
+	background-color:#FFB4B0;
+	padding: 10px;
+	font-style: Arial;
+	font-size: 20px;
+	border: black medium solid;
+	margin: 10px 30px 10px 30px;
+	
+}
+
+li.selected a {
+	text-decoration: none;
+	color: black;
+
+}
+
+
+/*GENRE FORM*/
+
+#genre1>ul>li {
+	list-style-type: none;
+}
+
+.genre-text{
+	display: block;
+	margin: 10px 0 0 0;
+}
+
+#genre2>ul>li {
+	list-style-type: none;
+}
+
+#genre2 {
+	display: inline-block;
+}
+
+#genre1 {
+	/*margin-left: -50px;*/
+	/*float: left;*/
+	display:inline-block;
+}
+#genre1 > ul {
+	padding-left: 0px
+}
+#genre2 > ul {
+	padding-left: 0px;
+}

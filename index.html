@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 
 <body>
+	
   <header>
    <div class="nav">
     <nav>
@@ -20,15 +21,15 @@
     </nav>
     </div>
   </header>
-
-		<form action="form.html" method="POST" class="music-form">
-	    <fieldset class="fieldset">
+  	<div class = "all-forms">
+		<form action="form.html" method="POST">
+	    <fieldset>
 	      <label for="song-length" class="move-text">Song Length</label>
 
 	      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
 	    
-				<label for="feedback-type" class="move-text">Artists:</label>
-			    <select id="artists" name="type">
+				<label for="feedback-type">Artists:</label>
+			    <select name="type">
 			    	<option>Option</option>
 			      <option>Ben Sollee</option>
 			      <option>Jose Gonzalez</option>
@@ -36,8 +37,8 @@
 			      <option>The National</option>
 			    </select>
 			
-				<label for="feedback-type" class="move-text">Albums:</label>
-		    <select id="albums" name="type">
+				<label for="feedback-type">Albums:</label>
+		    <select name="type">
 		    	<option>Option</option>
 		      <option>Learning to Bend</option>
 		      <option>Walter Mitty</option>
@@ -68,7 +69,8 @@
 
 			</fieldset>
 		</form>
-
+		</div>
+<div class = "article-songs">
 		<article>
 		  <header>
 		    <h1 class="song-title">A Change is Gonna Come</h1>
@@ -98,6 +100,10 @@
 		  	<p class="article-text"> The National | Trouble Will Find Me | Indie </p>
 		  </section>
 		</article>
+	</div>
+
+
+		<script src="script.js"></script>
 
 </body>
 </html>

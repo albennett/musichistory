@@ -1,0 +1,157 @@
+/*
+  1. Take the contents of the sonnet div and place it in a variable
+  2. Find and output the starting position of the word "orphans"
+  3. Output the number of characters in the sonnet
+  4. Replace the first occurance of the string "winter" with "yuletide"
+  5. Replace all occurances of the string "the" with "a large"
+  6. Set the content of the sonnet div with the new string
+*/
+
+
+var sonnetElement = document.getElementById("sonnet");
+var sonnetText = sonnetElement.innerHTML;
+console.log("sonnetText", sonnetText);
+
+var indexOfOrphans = sonnetText.indexOf("orphans");
+console.log("indexOfOrphans", indexOfOrphans);
+console.log("length of sonnet", sonnetText.length)
+
+sonnetElement.innerHTML = sonnetText.replace("winter", "yuletide");
+sonnetElement.innerHTML = sonnetText.replace(/the/g, "a large");  //g means global replace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*var salary = 12;
+var monthlySalary = salary % 12;
+
+var isPurple = true;
+console.log("isPurple", isPurple);
+
+if (isPurple === true) {
+	// When condition is true
+	console.log("Is purple.");
+} else {
+	console.log("Is not purple.");
+}
+
+
+var seconds = 60;
+var minute = seconds * 60;
+console.log("minute", minute);
+var hour = minute * 60;
+console.log("hour", hour);
+var day = hour * 24;
+console.log("day", day);
+var year = day * 365;
+console.log("year", year);
+
+var hoursInYear = year / hour;
+console.log("hoursInYear", hoursInYear);
+var minutesInDecade =  (year * 10) / minute;
+console.log*"minutesInDecade", minutesInDecade;
+var myAgeInSeconds = year * 25;
+console.log("myAgeInSeconds", myAgeInSeconds);
+
+var myAge = 25;
+console.log("myAge", myAge);
+
+var isOld = 59;
+console.log("isOld", isOld);
+
+var breakpointAge = 50;
+
+if (myAge < isOld) {
+	console.log("I am young");
+} else {
+	console.log("I am old");
+} 
+
+
+var colors = ["red", "blue", "yellow", "purple"];
+var luckyNumbers = [4, 8, 15, 16, 23, 42];
+
+for (var i = 0; i < luckyNumbers.length; i = i + 2) {
+	console.log(luckyNumbers[i]);
+}
+
+//loop over colors
+for (var i = 0; i < colors.length; i++) {
+	console.log("current color is ", colors[i]);
+}
+
+//simple loop that increments  a value
+for (var i = 10; i <= 100; i += 10) {
+	console.log("plus ten", i);
+}
+
+//divide by two
+for (var i = 1024; i >= 2; i = i / 2) {
+	console.log("divided by two", i);
+}
+// add items to an array
+var itemArray = [];
+for (var i = 2; i <= 512; i = i * i) {
+	itemArray.push(i);
+} console.log("itemArray", itemArray);
+
+
+var prevArray = [];
+for (var x =100; x > 0; x-=1) {
+	console.log("x", x);
+	if (x % 2 === 0) {
+		prevArray.unshift(x);
+	} else {
+		prevArray.push(x);
+	}
+} console.log("prevArray", prevArray)
+
+
+//var lastItem = colors.pop(); // takes the last off the array
+//console.log("lastItem", lastItem);
+
+//colors.unshift("orange"); //adds an item to the beginning of array
+//colors.shift(); // removes item from beginning
+
+
+var firstName = "Steve";
+var lastName = " Brownlee";
+var fullName = firstName + lastName;
+console.log("fullName", fullName.replace("B"));
+
+var phrase = "The lazy dog";
+var newPhrase =  phrase.replace("lazy", "bounding");
+//alert(newPhrase);
+
+var number = "1000";
+var integer = parseInt(number);
+
+
+
+
+
+var el = document.getElementById("container");
+console.log("el", el);
+
+el.innerHTML = "I like NSS";
+var containerText = el.innerHTML;
+console.log("containerText", containerText) 
+*/
+
+
+
+
+

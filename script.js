@@ -41,7 +41,7 @@ var albumName = song.slice(song.indexOf("album")+6);
 console.log("albumname", albumName);
 
 
-newSongs[i] = "<h2>" + songName + " by" + artistName + "on the album " + albumName + "</h2>";
+newSongs[i] = "<p>" + songName + " by" + artistName + "on the album " + albumName + "</p>";
 }
 
 for (var j = 0; j < newSongs.length; j++) {

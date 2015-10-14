@@ -1,3 +1,71 @@
+
+
+
+/*Use JavaScript arrays, loops, and innerHTML to show the music you love.
+
+Students must use JavaScript to create a list of songs in the index.html file for their Music History project. Have them download the songs.js file, which contains an array of strings with song information.
+
+Each student must add one song to the beginning and the end of the array.
+Loop over the array and remove any words or characters that obviously don't belong.
+Students must find and replace the > character in each item with a - character.
+Must add each string to the DOM in index.html in the main content area.*/
+
+var songs = [];
+var newSongs = [];
+
+songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
+songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
+songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
+songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
+songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
+
+
+songs.push("If it Takes a Lifetime > by Jason Isbell on the album Something More than Free")
+songs.unshift("Stronger Than That > by Bahamas on the album Bahamas is Afie")
+
+for (var i = 0; i < songs.length; i++) {
+	song = songs[i];
+	song = song.replace(">", "-");
+	song = song.replace("*","");
+	song = song.replace("@","" );
+  song = song.replace("(","" );
+  song = song.replace("!","" );
+
+console.log(song);
+
+var songName = song.slice(0, song.indexOf("-")-1);
+console.log("songname", songName);
+var artistName = song.slice(song.indexOf("by")+2, song.indexOf("on the album"));
+console.log("artistname", artistName);
+var albumName = song.slice(song.indexOf("album")+6);
+console.log("albumname", albumName);
+
+
+newSongs[i] = "<h2>" + songName + " by" + artistName + "on the album" + albumName + "</h2>";
+}
+
+for (var j = 0; j < newSongs.length; j++) {
+	document.getElementById("article-songs").innerHTML += newSongs[j];
+}
+
+//sonnetElement.innerHTML = sonnetText.replace(/the/g, "a large");  //g means global replace
+
+
+//push = adds to end of array
+//unshift = adds to beg of array
+//
+
+
+
+
+
+
+
+
+
+
+
+
 /*
   1. Take the contents of the sonnet div and place it in a variable
   2. Find and output the starting position of the word "orphans"
@@ -8,7 +76,7 @@
 */
 
 
-var sonnetElement = document.getElementById("sonnet");
+/*var sonnetElement = document.getElementById("sonnet");
 var sonnetText = sonnetElement.innerHTML;
 console.log("sonnetText", sonnetText);
 
@@ -20,7 +88,7 @@ sonnetElement.innerHTML = sonnetText.replace("winter", "yuletide");
 sonnetElement.innerHTML = sonnetText.replace(/the/g, "a large");  //g means global replace
 
 
-
+*/
 
 
 

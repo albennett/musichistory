@@ -3,16 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
-  <link rel="stylesheet" type="text/css" href="style2.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-	
-	 <!-- <div class = "height">
-	 </div> -->
-	 <div class="flex-container">
-	 	<header class="flex-item">
-		 <div class="nav">
+	<header>
+		<div class="nav">
 		    <nav>
 		      <ul>
 		        <li class="selected"><a href="#">View music</a></li> 
@@ -22,23 +18,25 @@
 		        <li><a href="#">Profile</a></li>
 		      </ul>
 		    </nav>
-		    </div>
-		 </header>
-	  <div class="flex-item side-left">
-	  	<section class="flex-item">
+	   	</div>
+	   </header>
+	 
+	  <div class="side-left">
+	  	<section>
 		  	<div class = "all-forms">
 					<form action="form.html" method="POST">
 			      <label for="song-length" class="move-text">Song Length</label>
 
 			      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
 			    
-						<label for="feedback-type">Artists:</label>
-					    <select name="type" class="space-between">
-					    	<option>Option</option>
-					      <option>Ben Sollee</option>
-					      <option>Jose Gonzalez</option>
-					      <option>The Lone Bellow</option>
-					      <option>The National</option>
+					<label for="feedback-type">Artists:</label>
+					<br>
+					   	<select name="type" class="space-between">
+						    	<option>Option</option>
+						      <option>Ben Sollee</option>
+						      <option>Jose Gonzalez</option>
+						      <option>The Lone Bellow</option>
+						      <option>The National</option>
 					    </select>
 					
 						<label for="feedback-type">Albums:</label>
@@ -77,8 +75,8 @@
 	  </div>
 
 
-
-				<section class="flex-item main">
+	  		<div class="main">
+					<section>
 					<div id = "article-songs">
 						<!-- <article>
 						  <header>
@@ -111,7 +109,7 @@
 						</article>-->
 					</div>
 				</section>
-
+			</div>
 				<script src="script.js"></script>
 	</div>
 </body>

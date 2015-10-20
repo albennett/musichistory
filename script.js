@@ -28,8 +28,8 @@ for (var i = 0; i < songs.length; i++) {
 	song = song.replace(">", "-");
 	song = song.replace("*","");
 	song = song.replace("@","" );
-  song = song.replace("(","" );
-  song = song.replace("!","" );
+	  song = song.replace("(","" );
+	  song = song.replace("!","" );
 
 console.log(song);
 

@@ -98,6 +98,7 @@ body {
 #logo > h1 {
 	background-size: cover;
 	height: 300px;
+	margin-top: 0;
 	background-repeat: no-repeat;
 	background-image: url(https://static.pexels.com/photos/6319/smartphone-vintage-technology-music-large.jpg);
 }

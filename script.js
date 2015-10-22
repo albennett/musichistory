@@ -20,16 +20,31 @@ songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album App
 songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
 
 
+
 songs.push("If it Takes a Lifetime > by Jason Isbell on the album Something More than Free")
 songs.unshift("Stronger Than That > by Bahamas on the album Bahamas is Afie")
+
+var addInput = document.getElementById("add-input");
+console.log(addInput);
+
+addInput.addEventListener("click", getInputs)
+
+function getInputs () {
+	var songInput = document.getElementById("song-input").value;
+	var albumInput = document.getElementById("album-input").value;
+	var artistInput = document.getElementById("artist-input").value;
+	
+	document.getElementById("article-songs").innerHTML += "<p>" + songInput + " by " + artistInput + " on the album " + albumInput + "</p>"
+	console.log("hey, here are your songs: ",  songs);
+}
 
 for (var i = 0; i < songs.length; i++) {
 	song = songs[i];
 	song = song.replace(">", "-");
 	song = song.replace("*","");
 	song = song.replace("@","" );
-	  song = song.replace("(","" );
-	  song = song.replace("!","" );
+	song = song.replace("(","" );
+	song = song.replace("!","" );
 
 console.log(song);
 
@@ -47,6 +62,79 @@ newSongs[i] = "<p>" + songName + " by" + artistName + "on the album " + albumNam
 for (var j = 0; j < newSongs.length; j++) {
 	document.getElementById("article-songs").innerHTML += newSongs[j];
 }
+
+
+
+/*SINGLE PAGE APPLICATION*/
+
+////////////HOME//////////////////
+var homeLink = document.getElementById("nav-home");
+var leftView = document.getElementById("leftside-form");
+var addMusic = document.getElementById("textbox");
+
+homeLink.addEventListener("click", function() {
+  leftView.classList.add("visible");
+  leftView.classList.remove("hidden");
+  rightView.classList.remove("hidden");
+  rightView.classList.add("visible");
+  addMusic.classList.add("hidden");
+  addMusic.classList.remove("visible");
+
+});
+
+//////////////ADD////////////////
+var addLink = document.getElementById("nav-add");
+var rightView = document.getElementById("rightside-form");
+
+
+addLink.addEventListener("click", function() {
+	leftView.classList.remove("visible");
+	leftView.classList.add("hidden");
+	rightView.classList.remove("visible");
+	rightView.classList.add("hidden");
+	addMusic.classList.remove("hidden");
+	addMusic.classList.add("visible");
+});
+
+/////////LISTMUSIC/////////////////
+var listLink = document.getElementById("nav-list");
+var rightView = document.getElementById("rightside-form");
+
+listLink.addEventListener("click", function() {
+	  leftView.classList.add("visible");
+	  leftView.classList.remove("hidden");
+	  rightView.classList.remove("hidden");
+	  rightView.classList.add("visible");
+	  addMusic.classList.add("hidden");
+	  addMusic.classList.remove("visible");
+});
+
+//Once the user fills out the song form and clicks the add button, you should collect all values from
+// the input fields, add the song to your array of songs, and update the song list in the DOM.
+
+/*var addInput = document.getElementById("add-input");
+
+addInput.addEventListener("click", getInputs)
+
+function getInputs () {
+	var songInput = document.getElementById("song-input").value;
+	var albumInput = document.getElementById("album-input").value;
+	var artistInput = document.getElementById("artist-input").value;
+	songs.push("<p>" + songInput + "by" + artistInput + "on the album" + albumInput + "</p>")
+} */
+
+//newSongs[i] = "<p>" + songName + " by" + artistName + "on the album " + albumName + "</p>";
+
+
+
+
+
+
+
+
+
+
+
 
 //sonnetElement.innerHTML = sonnetText.replace(/the/g, "a large");  //g means global replace
 

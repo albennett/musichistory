@@ -1,82 +1,93 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Titillium+Web|Poiret+One|Droid+Sans|Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<header>
-		<div class="nav">
-		    <nav>
-		      <ul>
-		        <li class="selected"><a href="#">View music</a></li> 
-		        <li> | </li>
-		        <li><a href="#">Add music </a></li>
-		        <li> | </li>
-		        <li><a href="#">Profile</a></li>
-		      </ul>
-		    </nav>
-	   	</div>
-	   </header>
+			<div class="nav">
+			    <nav>
+			      <ul>
+			        <li class="selected"><a href="#" id="nav-home">Home</a></li> 
+			        <li> | </li>
+			        <li><a href="#" id="nav-add">Add music </a></li>
+			        <li> | </li>
+			        <li><a href="#" id="nav-list">List music</a></li>
+			      </ul>
+			    </nav>
+		     	</div>
+	 </header>
+	<div id="logo">
+		 <h1>Music History</h1>
+	</div>
+	<div id="textbox" class = "hidden">
+	   	Artist: <input type="text" name="artist" id="artist-input">
+		Album: <input type="text" name="album" id="album-input">
+		Song: <input type="text" name="song" id="song-input">
+		<button id="add-input">Add</button>
+	</div>
 	 
-	  <div class="side-left">
+	  <div class="side-left visible" id="leftside-form">
 	  	<section>
 		  	<div class = "all-forms">
-					<form action="form.html" method="POST">
-			      <label for="song-length" class="move-text">Song Length</label>
+				<form action="form.html" method="POST">
+				      <label for="song-length" class="move-text">Song Length</label>
 
-			      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
-			    
-					<label for="feedback-type">Artists:</label>
-					<br>
-					   	<select name="type" class="space-between">
-						    	<option>Option</option>
-						      <option>Ben Sollee</option>
-						      <option>Jose Gonzalez</option>
-						      <option>The Lone Bellow</option>
-						      <option>The National</option>
+				      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
+				    
+						<label for="feedback-type">Artists:</label>
+						<br>
+						   	<select name="type" class="space-between">
+							    	<option>Option</option>
+							      <option>Ben Sollee</option>
+							      <option>Jose Gonzalez</option>
+							      <option>The Lone Bellow</option>
+							      <option>The National</option>
+						    </select>
+						
+							<label for="feedback-type">Albums:</label>
+					    <select name="type">
+					    	<option>Option</option>
+					      <option>Learning to Bend</option>
+					      <option>Walter Mitty</option>
+					      <option>The Lone Bellow</option>
+					      <option>Trouble Will Find Me</option>
 					    </select>
-					
-						<label for="feedback-type">Albums:</label>
-				    <select name="type">
-				    	<option>Option</option>
-				      <option>Learning to Bend</option>
-				      <option>Walter Mitty</option>
-				      <option>The Lone Bellow</option>
-				      <option>Trouble Will Find Me</option>
-				    </select>
 
 
-				    <label for = "checkbox" class="genre-text">Genre:</label>
-					 
-			    	<div id="genre1">
-			    		<ul>
-						    <li><input type="checkbox" name="folk" value="folk"> Folk</li>
-					      <li><input type="checkbox" name="pop" value="pop"> Pop</li>
-					      <li><input type="checkbox" name="rock" value="rock"> Rock</li>
-					    </ul>
-			      </div>
-			      
-			      <div id="genre2">
-			      	<ul>
-					      <li><input type="checkbox" name="indie" value="indie"> Indie</li>
-					      <li><input type="checkbox" name="americana" value="americana"> Americana</li>
-					      <li><input type="checkbox" name="country" value="country"> Country</li>
-				      </ul>
-			      </div>
+					    <label for = "checkbox" class="genre-text">Genre:</label>
+						 
+				    	<div id="genre1">
+				    		<ul>
+							 <li><input type="checkbox" name="folk" value="folk"> Folk</li>
+						      <li><input type="checkbox" name="pop" value="pop"> Pop</li>
+						      <li><input type="checkbox" name="rock" value="rock"> Rock</li>
+						    </ul>
+				      </div>
+				      
+				      <div id="genre2">
+				      	<ul>
+						      <li><input type="checkbox" name="indie" value="indie"> Indie</li>
+						      <li><input type="checkbox" name="americana" value="americana"> Americana</li>
+						      <li><input type="checkbox" name="country" value="country"> Country</li>
+					      </ul>
+				      </div>
 
-			      <p class="button">Filter</p>
+				      <p class="button">Filter</p>
 
-					</form>
-					</div>
-				</section>
+				</form>
+			</div>
+		</section>
 	  </div>
 
 
-	  		<div class="main">
-					<section>
+	  		<div class="main visible" id="rightside-form" >
+				<section>
 					<div id = "article-songs">
 						<!-- <article>
 						  <header>

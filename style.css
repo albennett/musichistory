@@ -1,32 +1,47 @@
 body {
 	/*padding-top: 150px;*/
+	background-color: #edefed; 
+	padding: 0;
+	margin: 0;
 }
 
 .main {
 
   /*width: 40%;*/
-  background-color: #FEFAC0;
-  color: #785616;
+
+  background-color: white;
+  color: #007497;
   padding: 0 0 0 15px;
-  border: solid black;
   width: 900px;
   height: 400px;
   float: left;
-  margin: 10px 10px 0 0;
+  margin: 0 10px 10px 30px;
+  border: outset whiteSmoke;
+}
+
+
+#textbox {
+	margin: 7px;
+	background-color: teal;
+	height: 50px;
+	padding-top: 25px;
+	color: white;
+	font-family: 'Droid Sans', sans-serif;
+	padding-left: 15px;
 }
 
 .side-left { 
 
   /*width: 5%;*/
- 	background-color: #4DD7FA;
-	border: solid;
+ 	background-color: teal;
+ 	color: white;
 	padding: 0 15px;
-	border: solid;
-	padding: 15px;
       width: 200px;
-      height: 370px;
+      height: 400px;
       float: left;
-      margin: 10px 10px 0 0;
+      margin: 0 10px 10px 80px;
+      border: outset whiteSmoke;
+
 }
 
 .button {
@@ -45,10 +60,11 @@ body {
 /*ARTICLE STYLING*/
 
 #article-songs {
-	background-color: #FEFAC0;
-	
+	background-color: #white;
+	font-size: large;
 	color: #785616;
-  	padding: 0 0 0 15px;	
+  	padding: 10px 0 0 15px;	
+  	font-family: 'Droid Sans', sans-serif;
 }
 
 .space-between {
@@ -62,42 +78,74 @@ body {
 
 .article-text {
 	padding: 2px 0 3px 15px;
+	font-family: 'Droid Sans', sans-serif;
 }
 
 /*NAVIGATION*/
 
+
+
+#logo {
+	font-family: 'Covered By Your Grace', cursive;
+	display: inline;
+	font-size: 45px;
+	color: RebeccaPurple;
+	background-color: #007497;
+	text-align: center;
+
+}
+
+#logo > h1 {
+	background-size: cover;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-image: url(https://static.pexels.com/photos/6319/smartphone-vintage-technology-music-large.jpg);
+}
+
+
 .nav {
 	width: 100%;
+	display: inline-block;
 }
 
 .nav>nav>ul>li {
 
 	display: inline;
 	padding: 2px;
+	list-style-type: none;
+	font-family: 'Droid Sans', sans-serif;
+
 }
 
 nav ul {
 	text-align: left;
-	padding: 0;
+	padding-left: 5px;
+	text-decoration: none;
 }
 
 .nav>nav {
-	background-color:#FFB4B0;
-	padding: 10px;
+	background-color: #26272a;
 	font-style: Arial;
 	font-size: 20px;
-	border: black medium solid;
+	padding: 2px;
+
 	
+	
+}
+
+nav li a {
+	text-decoration: none;
+	color: lightGray;
 }
 
 li.selected a {
 	text-decoration: none;
-	color: black;
+	color: white;
 
 }
 
 /*COLOR ASSIGNMENT*/
-
+/*
 #article-songs p:nth-child(2n+0) {
   background-color: #FFF5EE;
 }
@@ -108,7 +156,7 @@ li.selected a {
 
 #article-songs p:first-child {
 	font-weight: bold;
-}
+}*/
 
 /*GENRE FORM*/
 
@@ -139,4 +187,14 @@ li.selected a {
 }
 #genre2 > ul {
 	padding-left: 0px;
+}
+
+/*SINGLE PAGE APPLICATION*/
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }

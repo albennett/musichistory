@@ -13,11 +13,11 @@
 			<div class="nav">
 			    <nav>
 			      <ul>
-			        <li class="selected"><a href="#" id="nav-home">Home</a></li> 
-			        <li> | </li>
+			        <!--<li class="selected"><a href="#" id="nav-home">Home</a></li> 
+			        <li> | </li>-->
+			         <li><a href="#" id="nav-list">List music</a></li>
+			         <li> | </li>
 			        <li><a href="#" id="nav-add">Add music </a></li>
-			        <li> | </li>
-			        <li><a href="#" id="nav-list">List music</a></li>
 			      </ul>
 			    </nav>
 		     	</div>
@@ -25,14 +25,14 @@
 	<div id="logo">
 		 <h1>Music History</h1>
 	</div>
-	<div id="textbox" class = "hidden">
+	<div id="textbox" class="hidden" >
 	   	Artist: <input type="text" name="artist" id="artist-input">
 		Album: <input type="text" name="album" id="album-input">
 		Song: <input type="text" name="song" id="song-input">
 		<button id="add-input">Add</button>
 	</div>
 	 
-	  <div class="side-left visible" id="leftside-form">
+	  <div class="side-left" id="leftside-form">
 	  	<section>
 		  	<div class = "all-forms">
 				<form action="form.html" method="POST">
@@ -42,7 +42,7 @@
 				    
 						<label for="feedback-type">Artists:</label>
 						<br>
-						   	<select name="type" class="space-between">
+						   	<select name="type" class="space-between artists-option">
 							    	<option>Option</option>
 							      <option>Ben Sollee</option>
 							      <option>Jose Gonzalez</option>
@@ -51,7 +51,7 @@
 						    </select>
 						
 							<label for="feedback-type">Albums:</label>
-					    <select name="type">
+					    <select name="type" class="albums-option">
 					    	<option>Option</option>
 					      <option>Learning to Bend</option>
 					      <option>Walter Mitty</option>
@@ -78,7 +78,7 @@
 					      </ul>
 				      </div>
 
-				      <p class="button">Filter</p>
+				      <button class="filter-button">Filter</button>
 
 				</form>
 			</div>
@@ -121,6 +121,7 @@
 					</div>
 				</section>
 			</div>
+				<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 				<script src="script.js"></script>
 	</div>
 </body>

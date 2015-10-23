@@ -1,0 +1,25 @@
+{
+  "songs": [
+
+    {
+      "title": "Salt & the Sea",
+      "artist": "Gregory Alan Isakov",
+      "album": "Songs for October"      
+    },
+        {
+      "title": "Different Colors",
+      "artist": "Walk the Moon",
+      "album": "Talking is Hard"
+    },
+    {
+      "title": "Unbelievers",
+      "artist": "Vampire Weekend",
+      "album": "Modern Vampires of the City"      
+    },
+    {
+      "title": "That Moon Song",
+      "artist": "Gregory Alan Isakov",
+      "album": "This Empty Northern Hempisphere"      
+    }
+  ]
+}

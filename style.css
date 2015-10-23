@@ -20,8 +20,15 @@ body {
 }
 
 
+	/*<div id="textbox" >
+	   	Artist: <input type="text" name="artist" id="artist-input">
+		Album: <input type="text" name="album" id="album-input">
+		Song: <input type="text" name="song" id="song-input">
+		<button id="add-input">Add</button>
+	</div>*/
+
 #textbox {
-	margin: 7px;
+	margin: 20px;
 	background-color: teal;
 	height: 50px;
 	padding-top: 25px;
@@ -29,6 +36,10 @@ body {
 	font-family: 'Droid Sans', sans-serif;
 	padding-left: 15px;
 }
+
+
+
+
 
 .side-left { 
 
@@ -44,7 +55,7 @@ body {
 
 }
 
-.button {
+.filter-button {
 	list-style: none;
 	border-radius: 50px;
 	border: black thin solid;
@@ -58,6 +69,11 @@ body {
 }
 
 /*ARTICLE STYLING*/
+
+.songs-big {
+	font-size: 18px;
+	color: purple;
+}
 
 #article-songs {
 	background-color: #white;
@@ -93,12 +109,15 @@ body {
 	background-color: #007497;
 	text-align: center;
 
+
+
 }
 
 #logo > h1 {
 	background-size: cover;
 	height: 300px;
 	margin-top: 0;
+	margin-bottom: 15px;
 	background-repeat: no-repeat;
 	background-image: url(https://static.pexels.com/photos/6319/smartphone-vintage-technology-music-large.jpg);
 }
@@ -107,6 +126,8 @@ body {
 .nav {
 	width: 100%;
 	display: inline-block;
+
+	
 }
 
 .nav>nav>ul>li {
@@ -115,6 +136,7 @@ body {
 	padding: 2px;
 	list-style-type: none;
 	font-family: 'Droid Sans', sans-serif;
+
 
 }
 
@@ -129,6 +151,7 @@ nav ul {
 	font-style: Arial;
 	font-size: 20px;
 	padding: 2px;
+
 
 	
 	

@@ -1,0 +1,167 @@
+body {
+  /*padding-top: 150px;*/
+  background-color: #edefed;
+  padding: 0;
+  margin: 0; }
+
+.main {
+  /*width: 40%;*/
+  background-color: white;
+  color: #007497;
+  padding: 0 0 0 15px;
+  margin: 0;
+  border: outset whiteSmoke; }
+
+/*<div id="textbox" >
+   	Artist: <input type="text" name="artist" id="artist-input">
+	Album: <input type="text" name="album" id="album-input">
+	Song: <input type="text" name="song" id="song-input">
+	<button id="add-input">Add</button>
+</div>*/
+#textbox {
+  margin: 20px;
+  background-color: teal;
+  height: 50px;
+  padding: 15px;
+  color: black;
+  font-family: 'Droid Sans', sans-serif;
+  padding-left: 15px; }
+
+.side-left {
+  background-color: teal;
+  color: white;
+  padding: 15px;
+  border: outset whiteSmoke; }
+
+.filter-button {
+  list-style: none;
+  border-radius: 50px;
+  border: black thin solid;
+  background-color: #C0C0C0;
+  width: 60px;
+  text-align: center; }
+
+.all-forms {
+  /*padding: 15px;*/ }
+
+/*ARTICLE STYLING*/
+.songs-big {
+  font-size: 18px;
+  color: purple; }
+
+.music-list {
+  color: purple; }
+
+#article-songs {
+  background-color: #white;
+  font-size: large;
+  color: #785616;
+  padding: 10px 0 0 15px;
+  font-family: 'Droid Sans', sans-serif; }
+
+.space-between {
+  margin: 0 0 10px; }
+
+.song-title {
+  color: #785616;
+  padding: 0 0 0 15px; }
+
+.article-text {
+  padding: 2px 0 3px 15px;
+  font-family: 'Droid Sans', sans-serif; }
+
+.btn-info {
+  color: purple; }
+
+/*NAVIGATION*/
+#logo {
+  font-family: 'Covered By Your Grace', cursive;
+  display: inline;
+  font-size: 45px;
+  /*color: RebeccaPurple;*/
+  background-color: #007497;
+  text-align: center; }
+
+#logo > h1 {
+  height: 300px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  background-repeat: no-repeat;
+  background-image: url(https://static.pexels.com/photos/6319/smartphone-vintage-technology-music-large.jpg);
+  background-size: cover; }
+
+.nav {
+  width: 100%;
+  display: inline-block; }
+
+.nav > nav > ul > li {
+  display: inline;
+  padding: 2px;
+  list-style-type: none;
+  font-family: 'Droid Sans', sans-serif; }
+
+nav ul {
+  text-align: left;
+  padding-left: 5px;
+  text-decoration: none; }
+
+.nav > nav {
+  background-color: #26272a;
+  font-style: Arial;
+  font-size: 20px;
+  padding: 2px; }
+
+nav li a {
+  text-decoration: none;
+  color: lightGray; }
+
+li.selected a {
+  text-decoration: none;
+  color: white; }
+
+/*COLOR ASSIGNMENT*/
+/*
+#article-songs p:nth-child(2n+0) {
+  background-color: #FFF5EE;
+}
+
+#article-songs p:nth-child(2n+1) {
+	background-color: #F5FFFA;
+}
+
+#article-songs p:first-child {
+	font-weight: bold;
+}*/
+/*GENRE FORM*/
+#genre1 > ul > li {
+  list-style-type: none; }
+
+.genre-text {
+  display: block;
+  margin: 10px 0 0 0; }
+
+#genre2 > ul > li {
+  list-style-type: none; }
+
+#genre2 {
+  display: inline-block; }
+
+#genre1 {
+  /*margin-left: -50px;*/
+  /*float: left;*/
+  display: inline-block; }
+
+#genre1 > ul {
+  padding-left: 0px; }
+
+#genre2 > ul {
+  padding-left: 0px; }
+
+/*SINGLE PAGE APPLICATION*/
+.visible {
+  display: block; }
+
+.hidden {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */

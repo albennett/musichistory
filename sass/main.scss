@@ -1,3 +1,8 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$white-color: #fff;
+
+
 body {
 	/*padding-top: 150px;*/
 	background-color: #edefed; 
@@ -12,7 +17,6 @@ body {
   background-color: white;
   color: #007497;
   padding: 0 0 0 15px;
-  height: 600px;
   margin: 0;
   border: outset whiteSmoke;
 }
@@ -41,14 +45,11 @@ body {
 
 .side-left { 
 
-  /*width: 5%;*/
  	background-color: teal;
  	color: white;
-	padding: 0 15px;
-/*      width: 200px;*/
-      height: 400px;
-      
+	padding: 15px;
       border: outset whiteSmoke;
+
 
 }
 
@@ -96,6 +97,13 @@ body {
 .article-text {
 	padding: 2px 0 3px 15px;
 	font-family: 'Droid Sans', sans-serif;
+}
+
+
+// buttons
+
+.btn-info {
+	color: purple;
 }
 
 /*NAVIGATION*/

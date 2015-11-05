@@ -1,101 +1,109 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Titillium+Web|Poiret+One|Droid+Sans|Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+<link href="./lib/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 
 <body>
 	<header>
-			<div class="nav">
-			    <nav>
-			      <ul>
-			        <!--<li class="selected"><a href="#" id="nav-home">Home</a></li> 
-			        <li> | </li>-->
-			         <li><a href="#" id="nav-list">List music</a></li>
-			         <li> | </li>
-			        <li><a href="#" id="nav-add">Add music </a></li>
+		    <nav class="navbar navbar-default navbar-fixed-top">
+			    <div class="nav">
+			      <ul class="nav nav-tabs">
+			         <li role="presentation" class="active"><a href="#" id="nav-list">List music</a></li>
+			         <li role="presentation"><a href="#" id="nav-add">Add music </a></li>
 			      </ul>
-			    </nav>
-		     	</div>
+			      </div>
+		    </nav>
+	     	</div>
 	 </header>
 	<div id="logo">
 		 <h1>Music History</h1>
 	</div>
-	<div id="textbox" class="hidden" >
+	<div id="textbox">
 	   	Artist: <input type="text" name="artist" id="artist-input">
 		Album: <input type="text" name="album" id="album-input">
 		Song: <input type="text" name="song" id="song-input">
 		<button id="add-input">Add</button>
 	</div>
-	 
-	  <div class="side-left" id="leftside-form">
-	  	<section>
-		  	<div class = "all-forms">
-				<form action="form.html" method="POST">
-				      <label for="song-length" class="move-text">Song Length</label>
+</div>
 
-				      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
-				    
-						<label for="feedback-type">Artists:</label>
-						<br>
-						   	<select name="type" class="space-between artists-option">
-							    	<option>Option</option>
-							      <option>Ben Sollee</option>
-							      <option>Jose Gonzalez</option>
-							      <option>The Lone Bellow</option>
-							      <option>The National</option>
-						    </select>
-						
-						<label for="feedback-type">Albums:</label>
-						    <select name="type" class="albums-option">
-							    	<option>Option</option>
-							      <option>Learning to Bend</option>
-							      <option>Walter Mitty</option>
-							      <option>The Lone Bellow</option>
-							      <option>Trouble Will Find Me</option>
-						    </select>
+<!-- container for responsive bootstrap -->
+	<div class= "container">
+	<!-- row for bootstrap -->
+		<div class="row">
+		<!-- class col-md-4 for left form -->
+		  <div class="side-left col-md-3" id="leftside-form">
+		  	<section>
+			  	<div class = "all-forms">
+					<form action="form.html" method="POST">
+					      <label for="song-length" class="move-text">Song Length</label>
 
-
-					    <label for = "checkbox" class="genre-text">Genre:</label>
-						 
-				    	<div id="genre1">
-				    		<ul>
-							 <li><input type="checkbox" name="folk" value="folk"> Folk</li>
-						      <li><input type="checkbox" name="pop" value="pop"> Pop</li>
-						      <li><input type="checkbox" name="rock" value="rock"> Rock</li>
-						    </ul>
-				      </div>
-				      
-				      <div id="genre2">
-				      	<ul>
-						      <li><input type="checkbox" name="indie" value="indie"> Indie</li>
-						      <li><input type="checkbox" name="americana" value="americana"> Americana</li>
-						      <li><input type="checkbox" name="country" value="country"> Country</li>
-					      </ul>
-				      </div>
-
-				      <button class="filter-button">Filter</button>
-
-				</form>
-			</div>
-		</section>
-	  </div>
+					      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
+					    
+							<label for="feedback-type">Artists:</label>
+							<br>
+							   	<select name="type" class="space-between artists-option">
+								    	<option>Option</option>
+								      <option>Ben Sollee</option>
+								      <option>Jose Gonzalez</option>
+								      <option>The Lone Bellow</option>
+								      <option>The National</option>
+							    </select>
+							
+							<label for="feedback-type">Albums:</label>
+							    <select name="type" class="albums-option">
+								    	<option>Option</option>
+								      <option>Learning to Bend</option>
+								      <option>Walter Mitty</option>
+								      <option>The Lone Bellow</option>
+								      <option>Trouble Will Find Me</option>
+							    </select>
 
 
-	  		<div class="main visible" id="rightside-form" >
+						    <label for = "checkbox" class="genre-text">Genre:</label>
+							 
+					    	<div id="genre1">
+					    		<ul>
+								 <li><input type="checkbox" name="folk" value="folk"> Folk</li>
+							      <li><input type="checkbox" name="pop" value="pop"> Pop</li>
+							      <li><input type="checkbox" name="rock" value="rock"> Rock</li>
+							    </ul>
+					      </div>
+					      
+					      <div id="genre2">
+					      	<ul>
+							      <li><input type="checkbox" name="indie" value="indie"> Indie</li>
+							      <li><input type="checkbox" name="americana" value="americana"> Americana</li>
+							      <li><input type="checkbox" name="country" value="country"> Country</li>
+						      </ul>
+					      </div>
+
+					      <button class="filter-button">Filter</button>
+
+					</form>
+				</div>
+			</section>
+	  	</div>
+          <div class = "col-md-1"></div>
+	  	<!-- class for bootstrap col-md-8 -->
+	  		<div class="main visible col-md-8" id="rightside-form" >
 				<section>
 					<div id = "article-songs">
 						<!-- <button id="more">More</button> --> 
 					</div>
 				</section>
 			</div>
-				<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-				<script src="script.js"></script>
+		</div>
+		<!-- end of row -->
 	</div>
+	<!-- end of container -->
+		<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
+				 
 </body>
 </html>
 

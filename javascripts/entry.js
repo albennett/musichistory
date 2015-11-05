@@ -15,8 +15,8 @@ requirejs.config({
 });
 
 require(
-  ["main"], 
-  function(main) {
+  ["bootstrap", "main"], 
+  function(bootstrap, main) {
   
   });
 

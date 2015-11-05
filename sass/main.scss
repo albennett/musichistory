@@ -10,6 +10,10 @@ body {
 	margin: 0;
 }
 
+.row {
+	// display: flex;
+}
+
 .main {
 
   /*width: 40%;*/
@@ -32,7 +36,6 @@ body {
 #textbox {
 	margin: 20px;
 	background-color: teal;
-	height: 50px;
 	padding: 15px;
 	color: black;
 	font-family: 'Droid Sans', sans-serif;

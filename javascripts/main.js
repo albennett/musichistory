@@ -24,15 +24,17 @@ function($, add_song, get_more_songs, populate_songs, hbs) {
 		});
 	};
 
-
-	populate_songs.getJson(listOfSongs);
-	// $("#article-songs").html(songList(songs));
-	$("#article-songs .bRemove").click(removeMoreSongs); 
-
-	function removeMoreSongs(){  
+	function removeMoreSongs () {  
+		console.log("this", this);
 		$(this).parent().parent().remove();
 		console.log($(this).parent().parent().remove());
 	}
+
+	populate_songs.getJson(listOfSongs);
+	// $("#article-songs").html(songList(songs));
+	$(document).on("click", ".bRemove", removeMoreSongs);
+	// $(".bRemove").click(removeMoreSongs); 
+
 
 		/////add songs
 	var addInput = $("#add-input");

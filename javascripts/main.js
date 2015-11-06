@@ -9,8 +9,8 @@ function($, add_song, get_more_songs, populate_songs, hbs) {
 	var listOfSongs = function(songList) { //displaying json file of songs
 		require(['hbs!../templates/songs'], function(songTemplate) {
 			console.log("just before template");
-			console.log(songList);
-			console.log(songTemplate);
+			console.log("songlist", songList);
+			console.log("songtemplate", songTemplate);
 			$("#article-songs").html(songTemplate(songList));
 		});
 	};

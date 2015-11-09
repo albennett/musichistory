@@ -3,12 +3,11 @@ function($, add_song, get_more_songs, populate_songs, hbs) {
 	$("#textbox").hide();
 	$(document).on("click", ".more", function() {
 		console.log("working");
-		get_more_songs.getJson(moreSongs);
-	});
+		get_more_songs.getJson(moreSongs); 
+	}); 
 
 	var listOfSongs = function(songList) { //displaying json file of songs
 		require(['hbs!../templates/songs'], function(songTemplate) {
-			console.log("just before template");
 			console.log("songlist", songList);
 			console.log("songtemplate", songTemplate);
 			$("#article-songs").html(songTemplate(songList));
@@ -20,9 +19,13 @@ function($, add_song, get_more_songs, populate_songs, hbs) {
 			console.log("just before template");
 			console.log(songList);
 			console.log(songTemplate);
-			$("#article-songs").append(songTemplate(songList));
+			$("#article-songs").append(songTemplate(songList));	
 		});
-	};
+
+		require(['hbs!../templates/artists'], function(songTemplate) {
+			$("#artistsOption").append(songTemplate(songList);
+			$("#albumsOption").append(songTemplate(songList);
+	});
 
 	function removeMoreSongs () {  
 		console.log("this", this);
@@ -32,7 +35,7 @@ function($, add_song, get_more_songs, populate_songs, hbs) {
 
 	populate_songs.getJson(listOfSongs);
 	// $("#article-songs").html(songList(songs));
-	$(document).on("click", ".bRemove", removeMoreSongs);
+	$(document).on("click", ".bRemove", removeMoreSongs); //because it's being dynamically added
 	// $(".bRemove").click(removeMoreSongs); 
 
 
@@ -70,50 +73,3 @@ function($, add_song, get_more_songs, populate_songs, hbs) {
 	});
 
 });
-
-	//Get First List of Songs---->
-	
-
-
-
-	
-
-	
-		//function to remove song when remove button is clicked
-		
-		//    loops through all the songs and moves them to the DOM
-		// for (var i = 0; i <songList.songs.length; i++){ 
-		//   	var currentSong = songList.songs[i];
-
-		// 	});
-		
-  				
-
-		  	// $("#article-songs").append("<div><h1>" + currentSong.title + "</h1>" + currentSong.artist + " | " + currentSong.album +  "    " + "<span><button class=' bRemove btn btn-default'>Delete</button></span></div>");
-		 	 //removes song when clicked
-		  // }
-	
-
-	
-
-
-
-
-
-	// function getInputs () {   //grabs value of add music form
-	// 	var songInput = $("#song-input").val();
-	// 	var albumInput = $("#album-input").val();
-	// 	var artistInput = $("#artist-input").val();
-	
-
-
-	// 	$("#article-songs").append("<div><h1>" + songInput + "</h1>" + artistInput + " | " + albumInput + "<span><button class='bRemove btn btn-default'>Delete</button></span></div>");
-	// 	$("#article-songs .bRemove").click(removeMoreSongs);
-	// }
-
-	
-
-
-
-// ^^^^^^^ Nothing below here!
-

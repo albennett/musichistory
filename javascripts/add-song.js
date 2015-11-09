@@ -7,7 +7,7 @@ define(["jquery", "hbs"],
 			var albumInput = $("#album-input").val();
 			var artistInput = $("#artist-input").val();
 		
-			require(['hbs!../templates/songs'], function(songTemplate) {
+			require(['hbs!../templates/songs', 'hbs!../templates/artists', 'hbs!../templates/albums'], function(songTemplate, artistTemplate, albumTemplate) {
 				console.log("callback", callback);
 				console.log("songtemplate", songTemplate);
 
@@ -21,8 +21,11 @@ define(["jquery", "hbs"],
 					]	
 				};
 
-				$("#article-songs").append(songTemplate(addIt));  //callback is undefined? do i need callback?
-				// $("#article-songs").append("<div><h1>" + songInput + "</h1>" + artistInput + " | " + albumInput + "<span><button class='bRemove btn btn-default'>Delete</button></span></div>");
+				$("#article-songs").append(songTemplate(addIt));  
+				$("#artistsOption").append(artistTemplate(addIt));
+				$("#albumsOption").append(albumTemplate(addIt));
+				
+				
 				$(".bRemove").click(remove);
 			});
 

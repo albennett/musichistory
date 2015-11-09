@@ -2,7 +2,8 @@ define(["jquery"], function($) {
 
 	return {
 	 	getJson: function(callBack){
-			$.ajax({url: "data/songs.json"}).done(callBack);
+			$.ajax({
+				url: "https://blazing-torch-712.firebaseio.com/.json",}).done(callBack);
 			// callBack(listOfSongs);
 
 	 	}

@@ -1,31 +1,36 @@
-define(["jquery", "add-song", "get-more-songs", "populate-songs", "hbs"], 
-function($, add_song, get_more_songs, populate_songs, hbs) { 
+define(["jquery", "add-song", "populate-songs", "hbs"], 
+function($, add_song, populate_songs, hbs) { 
 	$("#textbox").hide();
-	$(document).on("click", ".more", function() {
-		console.log("working");
-		get_more_songs.getJson(moreSongs); 
-	}); 
+	// $(document).on("click", ".more", function() {
+	// 	console.log("working");
+	// 	get_more_songs.getJson(moreSongs); 
+	// }); 
 
 	var listOfSongs = function(songList) { //displaying json file of songs
-		require(['hbs!../templates/songs'], function(songTemplate) {
+		require(['hbs!../templates/songs', 'hbs!../templates/artists', 'hbs!../templates/albums'], function(songTemplate, artistTemplate, albumTemplate) {
 			console.log("songlist", songList);
 			console.log("songtemplate", songTemplate);
 			$("#article-songs").html(songTemplate(songList));
+			$("#artistsOption").append(artistTemplate(songList));
+			$("#albumsOption").append(albumTemplate(songList));
 		});
+
 	};
 
 	var moreSongs = function(songList) { //displaying json file of songs
-		require(['hbs!../templates/songs'], function(songTemplate) {
+		require(['hbs!../templates/songs', 'hbs!../templates/artists', 'hbs!../templates/albums'], function(songTemplate, artistTemplate, albumTemplate) {
 			console.log("just before template");
 			console.log(songList);
 			console.log(songTemplate);
-			$("#article-songs").append(songTemplate(songList));	
+			$("#article-songs").append(songTemplate(songList));
+			$("#artistsOption").append(artistTemplate(songList));
+			$("#albumsOption").append(albumTemplate(songList));
 		});
+		
+	};
 
-		require(['hbs!../templates/artists'], function(songTemplate) {
-			$("#artistsOption").append(songTemplate(songList);
-			$("#albumsOption").append(songTemplate(songList);
-	});
+
+	
 
 	function removeMoreSongs () {  
 		console.log("this", this);
@@ -36,7 +41,7 @@ function($, add_song, get_more_songs, populate_songs, hbs) {
 	populate_songs.getJson(listOfSongs);
 	// $("#article-songs").html(songList(songs));
 	$(document).on("click", ".bRemove", removeMoreSongs); //because it's being dynamically added
-	// $(".bRemove").click(removeMoreSongs); 
+	
 
 
 		/////add songs

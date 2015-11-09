@@ -15,8 +15,8 @@ requirejs.config({
 });
 
 require(
-  ["jquery", "bootstrap", "main"], 
-  function($, bootstrap, main) {
+  ["jquery", "bootstrap", "main", "mainadd"], 
+  function($, bootstrap, main, mainadd) {
   
   });
 

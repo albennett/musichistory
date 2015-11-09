@@ -1,0 +1,35 @@
+{
+  "songs": { 
+   "change": {
+      "title": "A Change is Gonna Come",
+      "artist": "Ben Sollee",
+      "album": "Learning to Bend"
+    },
+   "medicine": {
+      "title": "Medicine",
+      "artist": "Grace Potter",
+      "album": "Grace Potter and the Nocturnals"      
+    },
+    
+  "salt": {
+      "title": "Salt & the Sea",
+      "artist": "Gregory Alan Isakov",
+      "album": "Songs for October"      
+    },
+    "colors": {
+      "title": "Different Colors",
+      "artist": "Walk the Moon",
+      "album": "Talking is Hard"
+    },
+    "unbelievers":{
+      "title": "Unbelievers",
+      "artist": "Vampire Weekend",
+      "album": "Modern Vampires of the City"      
+    },
+    "moon": {
+      "title": "That Moon Song",
+      "artist": "Gregory Alan Isakov",
+      "album": "This Empty Northern Hempisphere"      
+    }
+  }
+}

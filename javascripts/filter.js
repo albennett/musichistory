@@ -21,7 +21,7 @@ var filter = $("#filter-button");
     	console.log("currentAlbumName",currentAlbumName);
     	console.log("currentArtistName",currentArtistName);
   
-      // $(this).show();
+      $(this).show();
       if(albumOption !== currentAlbumName && artistOption !== currentArtistName) {
         // Hides the song titles not selected
         console.log("this",this);

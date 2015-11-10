@@ -1,12 +1,10 @@
 define(["jquery", "add-song", "populate-songs", "hbs"], 
 function($, add_song, populate_songs, hbs) { 
 	$("#textbox").hide();
-	// $(document).on("click", ".more", function() {
-	// 	console.log("working");
-	// 	get_more_songs.getJson(moreSongs); 
-	// }); 
-
+	
+// FUNCTION TO DISPLAY SONGS IN INPUT
 	var listOfSongs = function(songList) { //displaying json file of songs
+		//grabs content form handlebar templates and appends to html and options form
 		require(['hbs!../templates/songs', 'hbs!../templates/artists', 'hbs!../templates/albums'], function(songTemplate, artistTemplate, albumTemplate) {
 			console.log("songlist", songList);
 			console.log("songtemplate", songTemplate);
@@ -17,34 +15,22 @@ function($, add_song, populate_songs, hbs) {
 
 	};
 
-	var moreSongs = function(songList) { //displaying json file of songs
-		require(['hbs!../templates/songs', 'hbs!../templates/artists', 'hbs!../templates/albums'], function(songTemplate, artistTemplate, albumTemplate) {
-			console.log("just before template");
-			console.log(songList);
-			console.log(songTemplate);
-			$("#article-songs").append(songTemplate(songList));
-			$("#artistsOption").append(artistTemplate(songList));
-			$("#albumsOption").append(albumTemplate(songList));
-		});
-		
-	};
-
-
+	
 	
 
+//FUNCTION TO REMOVE SONGS
 	function removeMoreSongs () {  
 		console.log("this", this);
 		$(this).parent().parent().remove();
 		console.log($(this).parent().parent().remove());
 	}
-
+//CALLS POPULATESONGS.JS & GIVES REMOVESONGS AS PARAMETER
 	populate_songs.getJson(listOfSongs);
-	// $("#article-songs").html(songList(songs));
 	$(document).on("click", ".bRemove", removeMoreSongs); //because it's being dynamically added
 	
 
 
-		/////add songs
+//CLICK ADD, AND SONGS ARE ADDED BY ADDSONG.JS TO INPUT. 
 	var addInput = $("#add-input");
 	console.log(addInput);
 
@@ -55,7 +41,10 @@ function($, add_song, populate_songs, hbs) {
 		addMusic.hide();
 	});
 
-	 //////////////ADD////////////////
+
+
+
+	 //////////////ADD MUSIC NAV BAR////////////////
 	var addLink = $("#nav-add");
 	var rightView = $("#rightside-form");
 	var leftView = $("#leftside-form");
@@ -68,7 +57,7 @@ function($, add_song, populate_songs, hbs) {
 		addMusic.show();
 	});
 
-	/////////LISTMUSIC/////////////////
+	/////////LISTMUSIC NAV BAR/////////////////
 	var listLink = $("#nav-list");
 
 	listLink.click (function() {
@@ -76,5 +65,12 @@ function($, add_song, populate_songs, hbs) {
 		rightView.show();
 		addMusic.hide();
 	});
+
+////filter
+
+
+
+
+
 
 });

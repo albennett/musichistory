@@ -1,5 +1,5 @@
-define(["jquery", "add-song", "populate-songs", "hbs", "listofsongs"], 
-function($, add_song, populate_songs, hbs, getsongs) { 
+define(["jquery", "add-song", "populate-songs", "hbs", "loadsongs"], 
+function($, add_song, populate_songs, hbs, loadsongs) { 
 	$("#textbox").hide();
 	
 
@@ -11,7 +11,7 @@ function($, add_song, populate_songs, hbs, getsongs) {
 	}
 	// FUNCTION TO DISPLAY SONGS IN INPUT
 
-	populate_songs.getJson(getsongs.listOfSongs);
+	populate_songs.getJson(loadsongs.listOfSongs);
 		$(document).on("click", ".bRemove", removeMoreSongs);
 
 
@@ -41,12 +41,4 @@ function($, add_song, populate_songs, hbs, getsongs) {
 		rightView.show();
 		addMusic.hide();
 	});
-
-
-
-	
-	
-
-
-
 });

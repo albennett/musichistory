@@ -1,5 +1,10 @@
 {
   "songs": { 
+    // "Select Artist and Album": {
+    //   "artist": "Select Artist",
+    //   "album": "Select Album"
+    // },
+    
    "a change is gonna come": {
       "title": "A Change is Gonna Come",
       "artist": "Ben Sollee",

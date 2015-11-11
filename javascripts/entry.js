@@ -16,8 +16,8 @@ requirejs.config({
 });
 
 require(
-  ["jquery", "bootstrap", "lodash", "main", "mainadd", "filter"], 
-  function($, bootstrap, _, main, mainadd, filter) {
+  ["jquery", "bootstrap", "lodash", "main", "mainadd", "filter", "delete-button"], 
+  function($, bootstrap, _, main, mainadd, filter, deletebutton) {
   
   });
 

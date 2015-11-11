@@ -8,8 +8,11 @@ define(["jquery", "getunique"],
 			require(['hbs!../templates/songs', 'hbs!../templates/artists', 'hbs!../templates/albums'], 
 				function(songTemplate, artistTemplate, albumTemplate) {
 
+				console.log("songlist", songList);
 				var dataArray = $.map(songList.songs, function(e){
+					console.log("songlistsong", songList.songs);
 					return e;
+					
 				});
 
 				var uniqueArtist = getunique.getUniqueArtist(dataArray);
@@ -22,7 +25,6 @@ define(["jquery", "getunique"],
 				$("#albumsOption").html(albumTemplate(uniqueAlbum));
 				// $("#artistsOption").append("Select Artist");
 				// $("#albumsOption").append("Select Album");
-
 
 			});
 

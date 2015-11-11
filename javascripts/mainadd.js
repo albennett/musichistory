@@ -15,12 +15,11 @@ define(["jquery", "populate-songs", "main", "loadsongs"],
 			url: "https://blazing-torch-712.firebaseio.com/songs.json",
 			method: "POST",
 			data: JSON.stringify(newSong)
-		}).done(function(addedSong) {
+		}).done(function() {
 			populate_songs.getJson(loadsongs.listOfSongs);
 			$("#leftside-form").show();
 			$("#rightside-form").show();
 			$("#textbox").hide();
-			console.log("your new song: ", addedSong);
 		
 		}); 
 		

@@ -1,11 +1,6 @@
 {
   "songs": { 
-    // "Select Artist and Album": {
-    //   "artist": "Select Artist",
-    //   "album": "Select Album"
-    // },
-    
-   "a change is gonna come": {
+    "achangeisgonnacome": {
       "title": "A Change is Gonna Come",
       "artist": "Ben Sollee",
       "album": "Learning to Bend"
@@ -16,12 +11,12 @@
       "album": "Grace Potter and the Nocturnals"      
     },
     
-  "salt & the sea": {
+  "saltthesea": {
       "title": "Salt & the Sea",
       "artist": "Gregory Alan Isakov",
       "album": "Songs for October"      
     },
-    "different colors": {
+    "differentcolors": {
       "title": "Different Colors",
       "artist": "Walk the Moon",
       "album": "Talking is Hard"
@@ -31,7 +26,7 @@
       "artist": "Vampire Weekend",
       "album": "Modern Vampires of the City"      
     },
-    "that moon song": {
+    "thatmoonsong": {
       "title": "That Moon Song",
       "artist": "Gregory Alan Isakov",
       "album": "This Empty Northern Hempisphere"      

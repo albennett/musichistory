@@ -26,12 +26,13 @@ body {
 }
 
 
-	/*<div id="textbox" >
-	   	Artist: <input type="text" name="artist" id="artist-input">
-		Album: <input type="text" name="album" id="album-input">
-		Song: <input type="text" name="song" id="song-input">
-		<button id="add-input">Add</button>
-	</div>*/
+.logo-name {
+	padding-top: 10px;
+	padding-left: 900px;
+	font-family: 'Covered By Your Grace', cursive;
+	font-size: 22px;
+	color: teal;
+}
 
 #textbox {
 	margin: 20px;
@@ -45,10 +46,10 @@ body {
 
 .side-left { 
 
- 	background-color: teal;
- 	color: black;
+ 	background-color: white;
+ 	color: #4d575e;
 	padding: 15px;
-      border: outset whiteSmoke;
+      // border: outset whiteSmoke;
 
 }
 
@@ -75,8 +76,8 @@ body {
 #article-songs {
 	background-color: #white;
 	font-size: large;
-	color: #785616;
-  	padding: 10px 0 0 15px;	
+	color: #4d575e;
+  	padding: 10px 0 15px 15px;	
   	font-family: 'Droid Sans', sans-serif;
 }
 

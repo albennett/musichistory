@@ -7,8 +7,6 @@ define(["jquery"],
 			var songKey = $(this).attr("id");
 			console.log("songKey",songKey);
 
-			// return;
-
 			$.ajax({
 			url: "https://blazing-torch-712.firebaseio.com/songs/" + songKey +"/.json",
 			method: "DELETE"

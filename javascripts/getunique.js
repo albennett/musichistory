@@ -1,12 +1,11 @@
 
-//JUST TEST COPY OF STEVES USING LODASH
+//MAKES EACH ARTIST & ALBUM UNIQUE FOR OPTIONS -- USED LODASH
 
 define(["lodash"], 
 	function (_) {
 
-		return {
-		 getUniqueArtist: function(dataArray) {
-			//non chained syntax
+		return { //GETS CALLED IN LOADSONGS & ADDED TO HTML FOR OPTIONS
+		 getUniqueArtist: function(dataArray) { //DATA ARRAY IS CALLED IN LOADSONGS & ARRAY OF SONGLIST
 			var uniqueArtists = _.chain(dataArray)
 							   .uniq('artist')
 							   .pluck('artist')
@@ -15,7 +14,6 @@ define(["lodash"],
 			return uniqueArtists;
 
 			},
-			//chained methods syntax
 		 getUniqueAlbum: function(dataArray) {
 			var uniqueAlbums = _.chain(dataArray)
 							   .uniq('album')

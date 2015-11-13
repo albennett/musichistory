@@ -17,8 +17,6 @@ define(["jquery", "populate-songs", "main", "loadsongs"],
 			method: "POST",
 			data: JSON.stringify(newSong)
 		}).done(function() {
-			//RUNS GETJSON FUNCTION AGAIN, LOADS ALL SONGS, INCLUDING ADDED
-			// populate_songs.getJson(loadsongs.listOfSongs);
 			$("#leftside-form").show();
 			$("#rightside-form").show();
 			$("#textbox").hide();

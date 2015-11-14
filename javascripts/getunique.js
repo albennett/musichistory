@@ -1,4 +1,4 @@
-
+ 
 //MAKES EACH ARTIST & ALBUM UNIQUE FOR OPTIONS -- USED LODASH
 
 define(["lodash"], 

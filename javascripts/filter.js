@@ -1,5 +1,5 @@
  define(["jquery"], function($){
-
+ 
 var filter = $("#filter-button");
 //GRABS OPTION THAT IS SELECTED 
   filter.click(function(event) {

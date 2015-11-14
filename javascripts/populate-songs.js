@@ -12,7 +12,7 @@ define(["jquery", "loadsongs", "firebase"],
 		  var allSongsObject = snapshot.val();
 		  loadsongs.listOfSongs(allSongsObject);
 
-
+ 
 	});
 
 });

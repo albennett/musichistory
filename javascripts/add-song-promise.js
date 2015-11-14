@@ -20,8 +20,13 @@ define(function(require) {
         // reject the promise if failed
         deferred.reject(error);
         console.log("error", error);
+        alert("error");
       });
 
     return deferred.promise;
-  };  
+    
+
+};
+
+
 }); 

@@ -21,8 +21,8 @@ requirejs.config({
 });
 
 require(
-  ["jquery", "bootstrap", "lodash", "main", "mainadd", "filter", "delete-button", "add-song-promise", "q"], 
-  function($, bootstrap, _, main, mainadd, filter, deletebutton, addpromise, Q) {
+  ["jquery", "bootstrap", "lodash", "main", "promises", "filter", "add-song-promise", "delete-promise", "q"], 
+  function($, bootstrap, _, main, promises, filter, addpromise, deletepromise, Q) {
   
   });
 

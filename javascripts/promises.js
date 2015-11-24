@@ -1,5 +1,5 @@
-define(["jquery", "add-song-promise"], 
-	function($, addpromise) {
+define(["jquery", "add-song-promise", "delete-promise"], 
+	function($, addpromise, deletepromise) {
 
 //CLICK ADD, AND SONGS ARE ADDED TO FIREBASE
 	$("#add-input").click(function() {
@@ -22,7 +22,15 @@ define(["jquery", "add-song-promise"],
 				$("#textbox").hide();
 			
 			}); 		
-
+	      // $("#add-input").modal("show");
 	});
+
+	$(document).on("click", ".bRemove", function(event){
+			// deletes song on dom
+			$(this).parent().parent().remove();
+			var songKey = $(this).attr("id");
+			console.log("songkey", songKey);
+			deletepromise(songKey)
+		});
 
 });

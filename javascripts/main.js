@@ -1,8 +1,6 @@
 define(["jquery", "populate-songs", "hbs", "loadsongs"], 
 function($, hbs, loadsongs) { 
 	$("#textbox").hide();
-//LOADS SONGS ONTO PAGE, (GETS RELOADED IN MAINADD WHEN SOMEONE ADDS TO FIREBASE)
-	// populate_songs.getJson(loadsongs.listOfSongs);
  
 	 //////////////ADD MUSIC NAV BAR////////////////
 	var addLink = $("#nav-add");

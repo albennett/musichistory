@@ -1,5 +1,5 @@
 define(["jquery", "getunique"], 
-	function($, getunique) {
+	function($, getunique) { //POPULATE SONGS CALLS FUNCTIONS, AND PASSES ALLSONGSOBJECT AS
 	return {
 		listOfSongs: function(songList) { //displaying json file of songs
 		
@@ -16,6 +16,8 @@ define(["jquery", "getunique"],
 			require(['hbs!../templates/songs', 'hbs!../templates/artists', 'hbs!../templates/albums'], 
 				function(songTemplate, artistTemplate, albumTemplate) {	
 					console.log("songtemplate", songTemplate);
+					console.log("uniqueArtist", uniqueArtist);
+					console.log("songlist--", songList);
 
 					$("#article-songs").html(songTemplate(songList));
 					//unique artist gets added to options

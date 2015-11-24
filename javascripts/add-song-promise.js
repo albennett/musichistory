@@ -1,10 +1,10 @@
-define(function(require) {
+define(function(require) { 
   var Q = require("q");
   var $ = require("jquery");
 
-  return  function(newSong) {
-        console.log("loading add");
-        var deferred = Q.defer();
+  return function(newSong) {
+    console.log("loading add");
+    var deferred = Q.defer();
 
     $.ajax({ 
             url: "https://blazing-torch-712.firebaseio.com/songs.json",
@@ -24,9 +24,9 @@ define(function(require) {
       });
 
     return deferred.promise;
-    
+        
 
-};
+  };
 
 
 }); 

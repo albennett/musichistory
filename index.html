@@ -8,121 +8,95 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Titillium+Web|Poiret+One|Droid+Sans|Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
-	<header>
-			<div class="nav">
-			    <nav>
-			      <ul>
-			        <!--<li class="selected"><a href="#" id="nav-home">Home</a></li> 
-			        <li> | </li>-->
-			         <li><a href="#" id="nav-list">List music</a></li>
-			         <li> | </li>
-			        <li><a href="#" id="nav-add">Add music </a></li>
-			      </ul>
-			    </nav>
-		     	</div>
-	 </header>
-	<div id="logo">
-		 <h1>Music History</h1>
-	</div>
-	<div id="textbox" class="hidden" >
-	   	Artist: <input type="text" name="artist" id="artist-input">
-		Album: <input type="text" name="album" id="album-input">
-		Song: <input type="text" name="song" id="song-input">
-		<button id="add-input">Add</button>
-	</div>
-	 
-	  <div class="side-left" id="leftside-form">
-	  	<section>
-		  	<div class = "all-forms">
-				<form action="form.html" method="POST">
-				      <label for="song-length" class="move-text">Song Length</label>
-
-				      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
-				    
-						<label for="feedback-type">Artists:</label>
-						<br>
-						   	<select name="type" class="space-between artists-option">
-							    	<option>Option</option>
-							      <option>Ben Sollee</option>
-							      <option>Jose Gonzalez</option>
-							      <option>The Lone Bellow</option>
-							      <option>The National</option>
-						    </select>
-						
-							<label for="feedback-type">Albums:</label>
-					    <select name="type" class="albums-option">
-					    	<option>Option</option>
-					      <option>Learning to Bend</option>
-					      <option>Walter Mitty</option>
-					      <option>The Lone Bellow</option>
-					      <option>Trouble Will Find Me</option>
-					    </select>
-
-
-					    <label for = "checkbox" class="genre-text">Genre:</label>
-						 
-				    	<div id="genre1">
-				    		<ul>
-							 <li><input type="checkbox" name="folk" value="folk"> Folk</li>
-						      <li><input type="checkbox" name="pop" value="pop"> Pop</li>
-						      <li><input type="checkbox" name="rock" value="rock"> Rock</li>
-						    </ul>
-				      </div>
-				      
-				      <div id="genre2">
-				      	<ul>
-						      <li><input type="checkbox" name="indie" value="indie"> Indie</li>
-						      <li><input type="checkbox" name="americana" value="americana"> Americana</li>
-						      <li><input type="checkbox" name="country" value="country"> Country</li>
-					      </ul>
-				      </div>
-
-				      <button class="filter-button">Filter</button>
-
-				</form>
+<body ng-app="MusicHistory">
+	 <div ng-controller="MusicCtrl">
+		<header>
+				<div class="nav">
+				    <nav>
+				      <ul>
+				         <li><a href="#" id="nav-list" ng-click="listLink()">List music</a></li>
+				         <li> | </li>
+				        <li><a href="#" id="nav-add" ng-click="addLink()">Add music </a></li>
+				      </ul>
+				    </nav>
+			     	</div>
+		 </header>
+			<div id="logo">
+				 <h1>Music History</h1>
 			</div>
-		</section>
-	  </div>
+			<div id="textbox" class="hidden" >
+			   	Artist: <input type="text" name="artist" id="artist-input" ng-model="artistInput">
+				Album: <input type="text" name="album" id="album-input" ng-model="albumInput">
+				Song: <input type="text" name="song" id="song-input" ng-model="songInput">
+				<button ng-click="getInputs()">Add</button>
+			</div>
+			 
+			  <div class="side-left" id="leftside-form">
+			  	<section>
+				  	<div class = "all-forms">
+						<form action="form.html" method="POST">
+						      <label for="song-length" class="move-text">Song Length</label>
+
+						      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
+						    
+								<label for="feedback-type">Artists:</label>
+								<br>
+								   	<select name="type" class="space-between artists-option">
+									    	<option>Option</option>
+									      <option>Ben Sollee</option>
+									      <option>Jose Gonzalez</option>
+									      <option>The Lone Bellow</option>
+									      <option>The National</option>
+								    </select>
+								
+									<label for="feedback-type">Albums:</label>
+							    <select name="type" class="albums-option">
+							    	<option>Option</option>
+							      <option>Learning to Bend</option>
+							      <option>Walter Mitty</option>
+							      <option>The Lone Bellow</option>
+							      <option>Trouble Will Find Me</option>
+							    </select>
 
 
-	  		<div class="main visible" id="rightside-form" >
-				<section>
-					<div id = "article-songs">
-						<!-- <article>
-						  <header>
-						   <h1 class="song-title">A Change is Gonna Come</h1>
-						  </header>
-						  <section>
-						  	<p class="article-text"> Ben Sollee | Learning to Bend | Americana </p>
-						  </section>
+							    <label for = "checkbox" class="genre-text">Genre:</label>
+								 
+						    	<div id="genre1">
+						    		<ul>
+									 <li><input type="checkbox" name="folk" value="folk"> Folk</li>
+								      <li><input type="checkbox" name="pop" value="pop"> Pop</li>
+								      <li><input type="checkbox" name="rock" value="rock"> Rock</li>
+								    </ul>
+						      </div>
+						      
+						      <div id="genre2">
+						      	<ul>
+								      <li><input type="checkbox" name="indie" value="indie"> Indie</li>
+								      <li><input type="checkbox" name="americana" value="americana"> Americana</li>
+								      <li><input type="checkbox" name="country" value="country"> Country</li>
+							      </ul>
+						      </div>
 
-						  <header>
-						    <h1 class="song-title">Step Out</h1>
-						  </header>
-						  <section>
-						  	<p class="article-text"> Jose Gonzalez | Walter Mitty | Indie </p>
-						  </section>
+						      <button class="filter-button">Filter</button>
 
-						  <header>
-						    <h1 class="song-title">Then Came the Morning</h1>
-						  </header>
-						  <section>
-						  	<p class="article-text"> The Lone Bellow | Then Came the Morning | Americana </p>
-						  </section>
-
-						  <header>
-						    <h1 class="song-title">This is the Last Time</h1>
-						  </header>
-						  <section>
-						  	<p class="article-text"> The National | Trouble Will Find Me | Indie </p>
-						  </section> 
-						</article>-->
+						</form>
 					</div>
 				</section>
-			</div>
+			  </div>
+			  		<div class="main visible" id="rightside-form" >
+						<section>
+							<div id = "article-songs">
+							  <ul ng-repeat="songs in jsonSongs">
+							    <h3>{{ songs.title }} | {{songs.artist}} | {{songs.album}}<button class='delete-song' type='button' ng-click="deleteSong(songs)">Delete</button></h3>
+							    <!-- <h3>{{ songInput }} {{ artistInput }} {{ albumInput }}</h3> -->
+							  </ul>
+							</div>
+						</section>
+					</div>
+	</div>
 				<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 				<script src="script.js"></script>
+				<script src="lib/bower_components/angular/angular.min.js"></script>
 	</div>
 </body>
 </html>

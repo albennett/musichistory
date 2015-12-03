@@ -1,96 +1,79 @@
 $(document).ready(function() { 
 
+var app = angular.module("MusicHistory", []);
 
-  $.ajax({  //get
-    	url: "data/songs.json"
-  }).done(function listOfSongs (songList) {
-	console.log(songList.songs);
+app.controller("MusicCtrl", ["$q", "$http", "$scope", function($q, $http, $scope) {
 
-for (var i = 0; i <songList.songs.length; i++){
-  	var currentSong = songList.songs[i];
-  	$("#article-songs").append("<p>" + "<b class='songs-big'>" + currentSong.title + "</b>" + " peformed by " + currentSong.artist + " on the album " 
-  	+ currentSong.album +  ".    " + "<span><button class='bRemove'>Delete</button></span>" + "</p>");
- 	 $("#article-songs .bRemove").click( function(){  
-  	 $(this).parent().parent().remove()      
-   	console.log($(this).parent().parent().remove());
+	var rightView = $("#rightside-form");
+	var leftView = $("#leftside-form");
+	var addMusic = $("#textbox");
 
-   });
-  }
-  $("#article-songs").append("<button class='more'>More</button>");
-});
-
-$.ajax({  //get
-	url: "data/moresongs.json"
-}).done(function moreSongs (songList){
-	console.log(songList.songs);
-
-	$("#article-songs .more").on("click", function() {
-		$("#article-songs .more").remove();
-		console.log("working");
-		for (var i = 0; i <songList.songs.length; i++){
-			var currentSong = songList.songs[i];
-			$("#article-songs").append("<p>" + "<b class='songs-big music-list'>" + currentSong.title + "</b>" + " peformed by " + currentSong.artist + " on the album " 
-  			+ currentSong.album + ".    "+ "<span><button class='bRemove'>Delete</button></span>" + "</p>");
-			$("#article-songs .bRemove").click( function(){  
-  	 		$(this).parent().parent().remove()      
-   			console.log($(this).parent().parent().remove());
-   			});
-		}; $("#article-songs").append("<button class='more'>More</button>");
-	})
-});
+    $scope.getInputs = function() {
+		console.log("hello");
+		leftView.show();
+		rightView.show();
+		addMusic.hide();
+		
+		var addObject ={
+		  "songs": [
+		    {
+		      "title": "$scope.songInput",
+		      "artist": "$scope.artistInput",
+		      "album": "$scope.albumInput",
+		    }
+		    ]
+		  }
 
 
-
-   
-
-var addInput = $("#add-input");
-console.log(addInput);
-
-addInput.click(function() {
-	getInputs();
-	leftView.show();
-	rightView.show();
-	addMusic.hide();
-	});
-
-function getInputs () {
-	var songInput = $("#song-input").val();
-	var albumInput = $("#album-input").val();
-	var artistInput = $("#artist-input").val();
+		console.log("jsonSongs", $scope.jsonSongs);
+		console.log("addobject", addObject);
+		$scope.jsonSongs.append(addObject);
 	
-	$("#article-songs").append("<p>" + songInput + " by " + artistInput + " on the album " + albumInput + "</p>");
-}
+	}
+
+	 $scope.deleteSong = function(song) {
+		var songIndex = $scope.jsonSongs.indexOf(song); 
+  		console.log("song", song);
+
+		if (songIndex >= 0) {
+		    $scope.jsonSongs.splice(songIndex, 1);
+		  }
+
+	};
+
+	$scope.addLink = function() {
+		leftView.hide();
+		rightView.hide();
+		addMusic.show();
+	}
+	$scope.listLink = function(){
+		leftView.show();
+		rightView.show();
+		addMusic.hide();
+	}
 
 
-//////////////ADD////////////////
-var addLink = $("#nav-add");
-var rightView = $("#rightside-form");
-var leftView = $("#leftside-form");
-var addMusic = $("#textbox");
+  var getSongs = $q(function(resolve, reject) {
+      $http.get('./data/songs.json')
+      .success(
+        function(objectFromJSONFile) {
+          resolve(objectFromJSONFile.songs);
+        }, function(error) {
+          reject(error);
+        }
+      );
+    });
+
+  getSongs.then(function (songs) {
+    console.log("songs",songs);
+    $scope.jsonSongs = songs;
 
 
-addLink.click (function() {
-	console.log("hey");
+  }, function (error) {
+    console.log("Failed");
+  });
 
-	leftView.hide();
-	rightView.hide();
-	addMusic.show();
-
-});
-
-/////////LISTMUSIC/////////////////
-var listLink = $("#nav-list");
-var rightView = $("#rightside-form");
-
-
-
-listLink.click (function() {
-
-	leftView.show();
-	rightView.show();
-	addMusic.hide();
-});
-
+}]);
 
 });
 

@@ -5,25 +5,29 @@ app.controller("SongListCtrl",
   // and have a matching argument in the callback function.
   [
     "$scope", 
-    "simple-songs", 
-    function($scope, simple_songs) {
+    "songs-storage", 
+    function($scope, songs_storage) {
       $scope.song_list = [];
       console.log('here\s the SongListCtrl!!!!!');
-      simple_songs.loadSongs().then(function(songs){
-      $scope.song_list = simple_songs.getSongs();  // Returns all songs
-      console.log("$scope.song_list", $scope.song_list);
+      songs_storage.loadSongs().then(function(songs){
+      $scope.song_list = songs_storage.getSongs();  // Returns all songs
+        console.log("$scope.song_list", $scope.song_list);
 
-      // $scope.deleteSong = function(song) {
-      //   var songIndex = $scope.song_list.indexOf(song); 
-      //     console.log("song", song);
-
-      //   if (songIndex >= 0) {
-      //       $scope.jsonSongs.splice(songIndex, 1);
-      //     }
-
-      // };
+       
+        $scope.deleteSong(songs);
       
       })
+    
+
+     $scope.deleteSong = function(song) {
+        var songIndex = $scope.song_list.indexOf(song); 
+          console.log("song", song);
+
+        if (songIndex >= 0) {
+            $scope.jsonSongs.splice(songIndex, 1);
+          }
+      }
+
     }
   ]
 );

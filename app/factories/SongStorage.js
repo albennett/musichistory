@@ -1,4 +1,4 @@
-app.factory("simple-songs", 
+app.factory("songs-storage", 
 ["$q", "$http",
 function($q, $http) {
 
@@ -52,8 +52,8 @@ function($q, $http) {
       })[0];
     },
     addSong: function(song) {
-      console.log("Added single song to factory");
       song_list.push(song);
+      console.log("Added single song to factory");
       return song_list;
     }
   }

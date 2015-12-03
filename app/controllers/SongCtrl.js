@@ -8,12 +8,13 @@ app.controller("SongListCtrl",
     "songs-storage", 
     function($scope, songs_storage) {
       $scope.song_list = [];
+      $scope.deleteSong;
       console.log('here\s the SongListCtrl!!!!!');
       songs_storage.loadSongs().then(function(songs){
       $scope.song_list = songs_storage.getSongs();  // Returns all songs
         console.log("$scope.song_list", $scope.song_list);
 
-       
+       console.log("songs for delete", songs);
         $scope.deleteSong(songs);
       
       })
@@ -24,7 +25,7 @@ app.controller("SongListCtrl",
           console.log("song", song);
 
         if (songIndex >= 0) {
-            $scope.jsonSongs.splice(songIndex, 1);
+            $scope.song_list.splice(songIndex, 1);
           }
       }
 

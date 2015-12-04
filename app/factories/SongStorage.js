@@ -13,6 +13,7 @@ function($q, $http) {
             Convert Firebase's object of objects into an array of objects, and store it in the private variable
             */
             song_list = Object.keys(objectFromJSONFile.songs).map(song => objectFromJSONFile.songs[song]);
+            console.log("songlist", song_list);
             resolve(song_list);
           }, function(error) {
             reject(error);

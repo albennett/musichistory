@@ -46,8 +46,8 @@
 	  		<div class="main visible" id="rightside-form" >
 				<section>
 					<div id = "article-songs">
-					  <ul ng-repeat="song in song_list">
-					    <h3>{{ song.title }} | {{ song.artist }} | {{ song.album }}<button class='delete-song' type='button' ng-click="deleteSong(song)">Delete</button></h3>
+					  <ul ng-repeat="song in songs">
+					    <a href="#/songs/{{ song.$id }}" class="href-style"><h3>{{ song.title }} | {{ song.artist }} | {{ song.album }}<button class='delete-song' type='button' ng-click="deleteSong(song)">Delete</button></h3>
 					     <!-- <h3>{{ songInput }} {{ artistInput }} {{ albumInput }}</h3>  -->
 					  </ul>
 					</div>

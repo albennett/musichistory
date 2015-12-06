@@ -3,51 +3,31 @@
 	  <div class="side-left" id="leftside-form">
 	  	<section>
 		  	<div class = "all-forms">
-				<form action="form.html" method="POST">
-		     <label for="song-length" class="move-text">Song Length</label>
+					<form action="form.html" method="POST">
+			    	<label for="song-length" class="move-text">Song Length</label>
 
-		      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
-		    
-				<label for="feedback-type">Artists:</label>
-				<br>
-				   	<select name="type" class="space-between artists-option" ng-model="filterArtist" ng-options="songs.artist for songs in jsonSongs">
-					    	
-				    </select>
-				
-					<label for="feedback-type">Albums:</label>
-			    <select name="type" class="albums-option" ng-model="filterAlbum" ng-options="songs.album for songs in jsonSongs">
-			    </select>
+			      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
+			    
+						<label for="feedback-type">Artists:</label>
+							<br>
+						   	<select name="type" class="space-between artists-option" ng-model="filterArtist" ng-options="song.artist for song in songs | unique: 'artist'">
+						    </select>
+					
+						<label for="feedback-type">Albums:</label>
+						    <select name="type" class="albums-option" ng-model="filterAlbum" ng-options="song.album for song in songs | unique:'album'">
+						    </select>
 
-
-			    <label for = "checkbox" class="genre-text">Genre:</label>
-				 
-		    	<div id="genre1">
-		    		<ul>
-					 <li><input type="checkbox" name="folk" value="folk"> Folk</li>
-				      <li><input type="checkbox" name="pop" value="pop"> Pop</li>
-				      <li><input type="checkbox" name="rock" value="rock"> Rock</li>
-				    </ul>
-		      </div>
-		      
-		      <div id="genre2">
-		      	<ul>
-				      <li><input type="checkbox" name="indie" value="indie"> Indie</li>
-				      <li><input type="checkbox" name="americana" value="americana"> Americana</li>
-				      <li><input type="checkbox" name="country" value="country"> Country</li>
-			      </ul>
-		      </div>
-
-		      <button class="filter-button">Filter</button>
-
-				</form>
+			      <div><button type="button" class="filter-button center-block" id="filter-button">Filter</button></div>
+					</form>
 			</div>
 		</section>
 	  </div>
 	  		<div class="main visible" id="rightside-form" >
 				<section>
 					<div id = "article-songs">
-					  <ul ng-repeat="song in songs">
-					    <a href="#/songs/{{ song.$id }}" class="href-style"><h3>{{ song.title }} | {{ song.artist }} | {{ song.album }}<button class='delete-song' type='button' ng-click="deleteSong(song)">Delete</button></h3>
+					  <ul ng-repeat="song in songs | filterBy: ['artist']: filterArtist.artist | filterBy: ['album']: filterAlbum.album">
+					    <a href="#/songs/{{ song.$id }}" class="href-style">
+					    <h3>{{ song.title }} | {{ song.artist }} | {{ song.album }}</a><button class='delete-song' type='button' ng-click="deleteSong(song)">Delete</button></h3>
 					     <!-- <h3>{{ songInput }} {{ artistInput }} {{ albumInput }}</h3>  -->
 					  </ul>
 					</div>

@@ -1,5 +1,5 @@
 var app = angular.module("MusicHistory", 
-  ["firebase", "ngRoute"]);
+  ["firebase", "angular.filter", "ngRoute"]);
 
 app.config(['$routeProvider',
   function($routeProvider) {
@@ -16,7 +16,7 @@ app.config(['$routeProvider',
         templateUrl: 'partials/songdetail.html',
         controller: 'SongDetailCtrl'
       })
-      .otherwise('/songs/list');
+      .otherwise({ redirectTo: '/songs/list'});
   }]);
 
 

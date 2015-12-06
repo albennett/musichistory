@@ -24,14 +24,6 @@ body {
 	color: black;
 }
 
-
-	/*<div id="textbox" >
-	   	Artist: <input type="text" name="artist" id="artist-input">
-		Album: <input type="text" name="album" id="album-input">
-		Song: <input type="text" name="song" id="song-input">
-		<button id="add-input">Add</button>
-	</div>*/
-
 #textbox {
 	margin: 20px;
 	background-color: teal;

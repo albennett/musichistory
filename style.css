@@ -19,13 +19,10 @@ body {
   border: outset whiteSmoke;
 }
 
-
-	/*<div id="textbox" >
-	   	Artist: <input type="text" name="artist" id="artist-input">
-		Album: <input type="text" name="album" id="album-input">
-		Song: <input type="text" name="song" id="song-input">
-		<button id="add-input">Add</button>
-	</div>*/
+.href-style {
+	text-decoration: none;
+	color: black;
+}
 
 #textbox {
 	margin: 20px;

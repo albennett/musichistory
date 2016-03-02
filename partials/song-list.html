@@ -1,0 +1,36 @@
+
+<div> 
+	  <div class="side-left" id="leftside-form">
+	  	<section>
+		  	<div class = "all-forms">
+					<form action="form.html" method="POST">
+			    	<label for="song-length" class="move-text">Song Length</label>
+
+			      <input type="range" name="song-length" min="15" max="25" step="1.7" value="18.5">
+			    
+						<label for="feedback-type">Artists:</label>
+							<br>
+						   	<select name="type" class="space-between artists-option" ng-model="filterArtist" ng-options="song.artist for song in songs | unique: 'artist'">
+						    </select>
+					
+						<label for="feedback-type">Albums:</label>
+						    <select name="type" class="albums-option" ng-model="filterAlbum" ng-options="song.album for song in songs | unique:'album'">
+						    </select>
+
+			      <div><button type="button" class="filter-button center-block btn btn-default" id="filter-button">Filter</button></div>
+					</form>
+			</div>
+		</section>
+	  </div>
+	  		<div class="main visible" id="rightside-form" >
+				<section>
+					<div id = "article-songs">
+					  <ul ng-repeat="song in songs | filterBy: ['artist']: filterArtist.artist | filterBy: ['album']: filterAlbum.album">
+					    <a href="#/songs/{{ song.$id }}" class="href-style">
+					    <h3>{{ song.title }} | {{ song.artist }} | {{ song.album }}</a><button class='delete-song' type='button' ng-click="deleteSong(song)">Delete</button></h3>
+					     <!-- <h3>{{ songInput }} {{ artistInput }} {{ albumInput }}</h3>  -->
+					  </ul>
+					</div>
+				</section>
+			</div> 
+</div>
